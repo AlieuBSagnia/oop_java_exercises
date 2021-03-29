@@ -4,7 +4,14 @@ package com.techreturners.cats;
 public abstract class CatImpl implements Cat {
     private boolean sleeping;
     private int height;
-    private String type;
+    private String eatingSound;
+    private String setting;
+
+    public CatImpl(String eatingSound ,int height, String setting){
+        this.eatingSound = eatingSound;
+        this.height = height;
+        this.setting = setting;
+    }
 
     @Override
     public boolean isAsleep() {
@@ -24,14 +31,14 @@ public abstract class CatImpl implements Cat {
     }
 
     public String getSetting() {
-        return "";
+        return this.setting;
     }
 
     public int getAverageHeight() {
-        return height;
+        return this.height;
     }
 
     public String eat() {
-        return null;
+        return eatingSound;
     }
 }
